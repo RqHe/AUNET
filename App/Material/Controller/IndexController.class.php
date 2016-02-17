@@ -4,8 +4,8 @@ use Org\Util\Rbac;
 use Think\Controller;
 use Think\Verify;
 class IndexController extends Controller {
+	public function index(){
 
-    public function index(){
         $this->display();
     }
     public function material_login(){
@@ -37,7 +37,7 @@ class IndexController extends Controller {
         import('Org.Util.Rbac');
         Rbac::saveAccessList();
 //        dump($_SESSION);die;
-        $this->redirect('Material/Material/material_index');
+        $this->redirect('Material/Material/apply');
 
     }
     public function verify(){
@@ -50,3 +50,4 @@ class IndexController extends Controller {
         $verify->entry();
     }
 }
+?>
